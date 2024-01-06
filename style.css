@@ -1,0 +1,157 @@
+:root {
+  --primary-blue: #2a4dd0;
+  --primary-green: #4ca154;
+  --dark-text-color: #111729;
+  --pale-text-color: #223344;
+  --main-background-color: #f2f9fe;
+
+  --ff-primary: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--main-background-color);
+  font-family: var(--ff-primary);
+}
+
+.nav {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.nav .hamburger {
+  display: none;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav li {
+  list-style-type: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--pale-text-color);
+  font-weight: 400;
+}
+
+.grid-container {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5em;
+}
+
+.landing-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+.landing-left h1 {
+  font-size: 70px;
+  color: var(--pale-text-color);
+}
+
+.landing-left p {
+  color: #888;
+}
+
+.landing-left .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.landing-left .card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.landing-left button {
+  height: 50px;
+  width: 120px;
+  background-color: var(--primary-blue);
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+  font-weight: bold;
+}
+
+.landing-right img {
+  height: 600px;
+}
+
+@media (width <= 1024px) {
+  .nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 5rem;
+  }
+
+  .landing-left {
+    max-width: 600px;
+  }
+}
+
+@media (width <= 640px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .nav .hamburger {
+    display: block;
+  }
+
+  .nav ul {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .landing-left {
+    max-width: 400px;
+    padding: 1rem;
+  }
+
+  .landing-left h1 {
+    font-size: 40px;
+  }
+
+  .landing-right img {
+    height: 400px;
+  }
+}
